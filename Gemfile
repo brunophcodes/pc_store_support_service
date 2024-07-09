@@ -32,6 +32,13 @@ gem 'bootstrap'
 #Installing Simple form
 gem 'simple_form', github: 'heartcombo/simple_form'
 
+#Installing devise gem:
+gem 'devise'
+
+#Installing sassc dependency
+gem 'sassc', '~> 2.1.0'
+gem 'sassc-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
