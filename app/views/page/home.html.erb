@@ -1,0 +1,41 @@
+<div class="card mx-auto">
+  <section class="card-category flex-column mx-auto" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1576613109753-27804de2cba8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
+    <p> <strong> Repair Services </strong></p>
+    <%= link_to "Solicitar cotización", new_repair_request_path, class:"btn btn-primary" %>
+  </section>
+</div>
+
+
+<br>
+
+<div class="row text-center">
+    <div class="col-sm-6">
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1603114595741-e60bf9486e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Soy cliente</h5>
+          <p class="card-text">Si uno de sus artefactos electrónicos tiene un desperfecto, puede solicitar una cotización de reparación para poder ayudarlo.</p>
+        <%= link_to "Solicitar cotización", new_repair_request_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card mx-auto" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Soy administrador</h5>
+          <p class="card-text">Para visualizar las solicitudes de cotización de reparación de los equipos.</p>
+          <%= link_to "Ingresar", new_user_session_path, class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <h5 class="text-light">© 2024 Copyright: Tiendas TodoTecno</h5>
+  </div>
+  <!-- Copyright -->
+</footer>
