@@ -1,41 +1,51 @@
 <div class="card mx-auto">
   <section class="card-category flex-column mx-auto" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1576613109753-27804de2cba8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)">
     <p> <strong> Repair Services </strong></p>
-    <%= link_to "Solicitar cotización", new_repair_request_path, class:"btn btn-primary" %>
+    <%= link_to "Request a repair", new_repair_request_path, class:"btn btn-primary btn-lg fw-bolder" %>
   </section>
-</div>
-
+</div> 
 
 <br>
 
+<div> 
+  <p class="h3 text-center my-5 fw-bolder">  How can we help? </p>
+<div>
+
 <div class="row text-center">
-    <div class="col-sm-6">
-      <div class="card mx-auto" style="width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1603114595741-e60bf9486e04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+    <div class="col-sm-4">
+      <div class="card mx-auto border border-0" style="width: 18rem;">
+        <%= image_tag('tool.svg', class:'card-img-top', style:'height:150px')%>
         <div class="card-body">
-          <h5 class="card-title">Soy cliente</h5>
-          <p class="card-text">Si uno de sus artefactos electrónicos tiene un desperfecto, puede solicitar una cotización de reparación para poder ayudarlo.</p>
-        <%= link_to "Solicitar cotización", new_repair_request_path, class:"btn btn-primary" %>
+          <h5 class="card-title h5 fw-bold">Request a Repair</h5>
+          <p class="card-text">In case of a product malfunction, you can submit a request for a proper diagnosis</p>
         </div>
       </div>
     </div>
-    <div class="col-sm-6">
-      <div class="card mx-auto" style="width: 18rem;">
-        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="card-img-top" alt="...">
+    <div class="col-sm-4">
+      <div class="card mx-auto border border-0" style="width: 18rem;">
+        <%= image_tag('check-circle.svg', class:'card-img-top', style:'height:150px')%>
         <div class="card-body">
-          <h5 class="card-title">Soy administrador</h5>
-          <p class="card-text">Para visualizar las solicitudes de cotización de reparación de los equipos.</p>
-          <%= link_to "Ingresar", new_user_session_path, class:"btn btn-primary" %>
+          <h5 class="card-title h5 fw-bold">Certified Technicians</h5>
+          <p class="card-text">A certified technician will diagnose and repair your product</p>
         </div>
       </div>
     </div>
-  </div>
+   
+  <div class="col-sm-4">
+      <div class="card mx-auto border border-0" style="width: 18rem;">
+        <%= image_tag('cog.svg', class:'card-img-top', style:'height:150px')%>
+        <div class="card-body">
+          <h5 class="card-title h5 fw-bold">Genuine Parts</h5>
+          <p class="card-text"> Your product will be repaired using genuine parts</p>
+        </div>
+      </div>
+    </div>
 </div>
 
-<footer class="bg-dark text-center text-lg-start">
+<footer class="d-flex flex-wrap justify-content-center align-items-center py-3 border-top bg-dark text-center mt-auto">
   <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <h5 class="text-light">© 2024 Copyright: Tiendas TodoTecno</h5>
+  <div class="text-center p-3">
+    <h6 class="text-light">© 2024 Copyright: Tiendas TodoTecno</h5>
   </div>
   <!-- Copyright -->
 </footer>

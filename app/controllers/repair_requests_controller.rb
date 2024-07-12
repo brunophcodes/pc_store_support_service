@@ -1,4 +1,4 @@
-class RepairRequestController < ApplicationController
+class RepairRequestsController < ApplicationController
 
   def index 
     @repair_requests = RepairRequest.all
