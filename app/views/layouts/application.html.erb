@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag "application.bootstrap", media: 'all', "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>

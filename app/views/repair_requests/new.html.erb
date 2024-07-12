@@ -1,0 +1,18 @@
+<h1 class='text-center mt-5'>New Repair Request</h1>
+<p class='text-center'>Please fill the following form:</p>
+
+<div class="container mt-5 border border-secondary p-4 rounded" style="width:650px">
+  <%= simple_form_for (@repair_request) do |f| %>
+    <%= f.input :client_email, label: 'E-mail', placeholder: 'Enter your email' %>
+    <%= f.input :product_category, label: 'Choose the product category', :collection => ["Laptop" , "Smartphone", "Videogames Console", "TV" ], input_html: {class: 'test'} %>
+    <%= f.input :product_name, label: 'Product Name',placeholder: 'Enter the product name' %>
+    <%= f.input :repair_description, label: 'Malfunction Description',placeholder: 'Please describe the problem with the product' %>
+    <%= f.submit "Send", class: "btn btn-success px-4", style:"width:100%;"%>
+  <% end %>
+</div>
+
+<br>
+
+<div class="container text-center">
+  <% link_to 'Back', root_path %>
+</div>
