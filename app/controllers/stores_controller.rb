@@ -1,4 +1,4 @@
-class StoreController < ApplicationController
+class StoresController < ApplicationController
   before_action :find_store, only: %i[edit show update destroy]
 
   def index 
