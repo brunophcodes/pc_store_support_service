@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_10_023211) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_13_001706) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_023211) do
     t.string "repair_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_repair_requests_on_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -57,4 +59,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_10_023211) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "repair_requests", "stores"
 end
