@@ -1,5 +1,6 @@
 class RepairRequestsController < ApplicationController
   before_action :find_repair_request, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[new create]
  
   def index 
     @repair_requests = RepairRequest.all
