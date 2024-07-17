@@ -14,17 +14,21 @@ class CategoriesController < ApplicationController
 
     def create 
         @category = Category.new(category_params)
+        @category.save
+        redirect_to categories_path
     end
 
     def edit
     end
 
     def update
-        @category = Category.update(category_params)
+        @category.update(category_params)
+        redirect_to category_path(@category)
     end
 
     def destroy
         @category.destroy
+        redirect_to categories_path
     end
     
 
