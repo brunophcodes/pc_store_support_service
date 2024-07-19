@@ -1,0 +1,23 @@
+<div class="container mt-5 border border-secondary p-4 rounded" style="width:650px">
+  <h1>Update the Repair Requests' Status</h1>
+
+  <p> Plese update the status and price for the repair request:  <p>
+
+  <%= simple_form_for (@repair_request), url: repair_request_path do |f| %>
+  <%= f.input :repair_status, label: 'Status', collection: ["Pending" , "Aproved", "Denied"], input_html: {class: 'test'} %>
+  <%= f.input :client_email, label: "Client's Email", disabled: true %>
+  <%= f.input :product_name, label: "Product's name", disabled: true %>
+  <%= f.input :product_category, label: "Product's category", disabled: true %>
+  <%= f.input :repair_description, label: 'Repair details', disabled: true %>
+  <%= f.input :repair_price, label: 'Price'%>
+  <%= f.association :store, label: 'Store', label_method: :name, disabled: true %>
+  <%= f.submit "Edit", class: "btn btn-success px-4", style:"width:100%;"%>
+  <% end %>
+</div>
+
+<br>
+
+<div class="container text-center mb-5">
+  <%= link_to 'Back', repair_requests_path %>
+</div>
+</div>
