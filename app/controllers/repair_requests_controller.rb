@@ -40,10 +40,10 @@ class RepairRequestsController < ApplicationController
   private
 
   def repair_request_params
-    params.require(:repair_request).permit(:client_email, :product_category, :product_name, :repair_description)
+    params.require(:repair_request).permit(:client_email, :product_category, :product_name, :repair_description, :repair_price, :repair_status, :store_id)
   end
 
   def find_repair_request
-    @repair_request = RepairRequest.find(param[:id])
+    @repair_request = RepairRequest.find(params[:id])
   end
 end

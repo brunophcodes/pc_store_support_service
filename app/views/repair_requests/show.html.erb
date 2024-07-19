@@ -1,0 +1,18 @@
+<h1 class="text-center">Repair Request N°: <%= @repair_request.id  %></h1>
+
+<div class="container mt-5 p-4 rounded" style='width: 640px'>
+  <div class="card mx-auto" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @repair_request.repair_status %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @repair_request.product_name %></h6>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Category: <%= @repair_request.product_category  %></li>
+        <li class="list-group-item">Price: $<%= @repair_request.repair_price  %></li>
+        <li class="list-group-item">Store: <%= @repair_request.store.name  %></li>
+      </ul>
+      <p class="card-text">Repair Details: <%= @repair_request.repair_description %> </p>
+      <a href="#" class="card-link"><%= link_to 'Edit', edit_repair_request_path(@repair_request) %></a>
+      <a href="#" class="card-link"><%= link_to 'Back', repair_requests_path %> </a>
+    </div>
+  </div>
+</div>
