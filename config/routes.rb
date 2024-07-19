@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :categories
   resources :stores
   resources :repair_requests
+  get 'pages/farewell', to:'pages#farewell'
+  get 'pages/sorry', to: 'pages#sorry' 
   # Defines the root path route ("/")
   # root "posts#index"
 end

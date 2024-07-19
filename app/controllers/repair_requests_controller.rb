@@ -3,7 +3,7 @@ class RepairRequestsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[new create]
  
   def index 
-    @repair_requests = RepairRequest.all
+    @repair_requests = RepairRequest.all.sort
   end
 
   def show
@@ -20,15 +20,20 @@ class RepairRequestsController < ApplicationController
 
      #Getting the available stores that matches the product category
      @available_stores = Store.joins(:categories).where(categories: {name: @repair_request.product_category})
-     @repair_request.store_id = @available_stores.sort.first.id
-     @repair_request.save
+     if @available_stores.size == 0
+       redirect_to pages_sorry_path
+     else
+       @repair_request.store_id = @available_stores.sort.first.id
+       @repair_request.save
+       redirect_to pages_farewell_path
+     end
   end
 
   def edit
   end
 
   def update
-     @repair_request = RepairRequest.update(repair_request_params)
+     @repair_request.update(repair_request_params)
      redirect_to repair_request_path(@repair_request)
   end
 
