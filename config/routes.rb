@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   resources :repair_requests
   get 'pages/farewell', to:'pages#farewell'
   get 'pages/sorry', to: 'pages#sorry' 
+  get '/404', to: 'errors#not_found'
+  get '/406', to: 'errors#unacceptable'
+  get '/500', to: 'errors#internal_server'
+  get '/422', to: 'errors#unprocessable'
   # Defines the root path route ("/")
   # root "posts#index"
 end
