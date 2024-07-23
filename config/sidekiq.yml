@@ -1,0 +1,11 @@
+:logfile: .log/sidekiq.log
+:concurrency: 3
+develop: 
+  :concurrency: 2
+:timeout: 60
+:verbose: true
+:queues:
+  - default
+  - mailers
+  - active_storage_analysis
+  - active_storage_purge

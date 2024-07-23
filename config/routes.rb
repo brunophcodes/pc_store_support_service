@@ -15,6 +15,11 @@ Rails.application.routes.draw do
   get '/406', to: 'errors#unacceptable'
   get '/500', to: 'errors#internal_server'
   get '/422', to: 'errors#unprocessable'
+
+  require 'sidekiq/web'
+  
+  mount Sidekiq::Web => '/sidekiq'
+
   # Defines the root path route ("/")
   # root "posts#index"
 end
