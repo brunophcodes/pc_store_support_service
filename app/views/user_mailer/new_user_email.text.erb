@@ -1,0 +1,15 @@
+Hi! We received your repair request!
+This has been: <%= @repair_request.repair_status %>
+     
+Repair Request details
+--------------------------
+
+Product: <%= @repair_request.product_name %>
+Category: <%= @repair_request.product_category %>
+Details: <%= @repair_request.repair_description %>
+<% if @repair_request.repair_status == 'Aproved' %>
+  Price: <%= @repair_request.repair_price %>
+  Please bring your device to the following store: <%= @repair_request.store.name %> to start with the repairment 
+<% else %>
+    We're sorry, our technicians can handle the malfunction you described at the moment.
+<% end %>

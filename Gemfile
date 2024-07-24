@@ -35,6 +35,8 @@ gem 'simple_form', github: 'heartcombo/simple_form'
 #Installing devise gem:
 gem 'devise'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 #Installing sassc dependency
 gem 'sassc', '~> 2.1.0'
 gem 'sassc-rails'
