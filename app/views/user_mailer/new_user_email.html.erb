@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+     <p>Hi! We received your repair request!</p>
+     <p>This has been: <%= @repair_request.repair_status %></p>
+     <p>
+     Repair Request details<br>
+     --------------------------
+     </p>
+     <p>Product: <%= @repair_request.product_name %></p>
+     <p>Category: <%= @repair_request.product_category %></p>
+     <p>Details: <%= @repair_request.repair_description %></p>
+     <% if @repair_request.repair_status == 'Aproved' %>
+       <p>Price: <%= @repair_request.repair_price %></p>
+       <p>Please bring your device to the following store: <%= @repair_request.store.name %> to start with the repairment </p>
+     <% else %>
+       <p>  We're sorry, our technicians can handle the malfunction you described at the moment.</p>
+     <% end %>
+  </body>
+</html>
