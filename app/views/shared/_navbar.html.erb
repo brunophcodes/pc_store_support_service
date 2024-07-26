@@ -7,6 +7,7 @@
         <% else %>
           <%= link_to "Sign in", new_user_session_path, class:"btn btn-warning me-2 " %>
         <%end%>
+        <%= button_to "Demo User", users_sign_as_demo_path, class:"btn btn-primary me-2 " %>
       </div>
     </header>
   </div>
