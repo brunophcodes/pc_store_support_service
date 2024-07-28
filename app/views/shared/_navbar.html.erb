@@ -4,10 +4,10 @@
       <div class="col-md-6 text-end">
         <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } , class: "btn btn-outline-primary me-2" %>
+          <%= link_to "Admin Dashboard", repair_requests_path, class:"btn btn-success me-2 " %>
         <% else %>
-          <%= link_to "Sign in", new_user_session_path, class:"btn btn-warning me-2 " %>
+          <%= button_to "Demo User", users_sign_as_demo_path, class:"btn btn-primary me-2 " %>
         <%end%>
-        <%= button_to "Demo User", users_sign_as_demo_path, class:"btn btn-primary me-2 " %>
       </div>
     </header>
-  </div>
+</div>
