@@ -1,23 +1,6 @@
 <div style="height:1000px">
   <div class="row" style="height:100%">
-  <!-- Agregar items al Navbar lateral o Sidebar -->
-    <div class="col-2 bg-light p-0 " id="navbar-dashboard ">
-      <div class="mt-3 mb-3 text-center"><h4>Dashboard</h4></div>
-      <div class="p-3  text-light text-center bg-success font-weight-bold"> <%= current_user.email %> </div>
-      <div class="border-bottom "></div>
-      <ul class="nav flex-column mt-2 text-center">
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class:"nav-link text-dark mt-3" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Categories", categories_path, class:"nav-link text-dark mt-3" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Stores", stores_path, class:"nav-link text-dark mt-3" %>
-        </li>
-      </ul>
-    </div> 
-    <!-- Repair Requests table -->
+    <%= render 'shared/sidebar'%>
     <div class="col-10">
       <h1 class="text-center my-4">Repair Requests</h1>
       <div class="container">
